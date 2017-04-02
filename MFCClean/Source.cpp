@@ -4,13 +4,20 @@
 #include "MinesDialog.h"
 #include "Miner.h"
 #include "MouseDialog.h"
+#include "MFC_Tutorial_Window2.h"
 
 class MFC_Tutorial_Window :public CFrameWnd
 {
 public:
 	MFC_Tutorial_Window()
 	{
-		CFrameWnd::Create(NULL, _T("MFC Tutorial Part 1 CoderSource Window"));
+		CFrameWnd::Create(NULL, _T("MFC Tutorial Part 1 CoderSource Window",
+			 WS_OVERLAPPEDWINDOW,
+			 rectDefault,
+			 NULL,        // != NULL for popups
+			 LPCTSTR lpszMenuName = IDR_MENU1,
+			 0,
+			 NULL));
 
 
 	}
@@ -19,13 +26,13 @@ public:
 
 class MyApp :public CWinApp
 {
-	MFC_Tutorial_Window *wnd;
+	MFC_Tutorial_Window2 *wnd;
 public:
 	BOOL InitInstance()
 	{
-		/*wnd = new MFC_Tutorial_Window();
+		wnd = new MFC_Tutorial_Window2();
 		m_pMainWnd = wnd;
-		m_pMainWnd->ShowWindow(SW_SHOW);*/
+		m_pMainWnd->ShowWindow(SW_SHOW);
 
 		
 		/*Mover m;
@@ -38,8 +45,8 @@ public:
 		CDialog* forma = m.run();
 		forma->DoModal();*/
 
-		MouseDialog* forma = new MouseDialog();
-		forma->DoModal();
+		/*MouseDialog* forma = new MouseDialog();
+		forma->DoModal();*/
 
 		
 		return TRUE;

@@ -12,7 +12,7 @@
 IMPLEMENT_DYNAMIC(MouseDialog, CDialog)
 
 MouseDialog::MouseDialog(CWnd* pParent /*=NULL*/)
-	: CDialog(MouseDialog::IDD, pParent)
+: CDialog(MouseDialog::IDD, pParent)
 {
 
 }
@@ -29,7 +29,7 @@ void MouseDialog::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(MouseDialog, CDialog)
-//	ON_WM_LBUTTONDBLCLK()
+	//	ON_WM_LBUTTONDBLCLK()
 	ON_WM_MOUSEMOVE()
 	ON_WM_NCLBUTTONDOWN()
 	ON_WM_NCLBUTTONUP()
@@ -70,7 +70,7 @@ void MouseDialog::OnNcLButtonDown(UINT nHitTest, CPoint point)
 
 	CString s;
 
-std:std::string str = "OnNcLButtonDown  "+ std::to_string(point.x) + " " + std::to_string(point.y);
+std:std::string str = "OnNcLButtonDown  " + std::to_string(point.x) + " " + std::to_string(point.y);
 	CString param = str.c_str();
 	display(param);
 }
@@ -79,12 +79,12 @@ std:std::string str = "OnNcLButtonDown  "+ std::to_string(point.x) + " " + std::
 void MouseDialog::OnNcLButtonUp(UINT nHitTest, CPoint point)
 {
 	// TODO: Agregue aquí su código de controlador de mensajes o llame al valor predeterminado
-	
+
 	CDialog::OnNcLButtonUp(nHitTest, point);
 
 	CString s;
 
-std:std::string str = "OnNcLButtonUp "+ std::to_string(point.x) + " " + std::to_string(point.y);
+std:std::string str = "OnNcLButtonUp " + std::to_string(point.x) + " " + std::to_string(point.y);
 	CString param = str.c_str();
 	display(param);
 

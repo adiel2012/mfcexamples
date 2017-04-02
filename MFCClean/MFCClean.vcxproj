@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,14 +18,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -65,19 +65,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MFC_Tutorial_Window2.cpp" />
     <ClCompile Include="Miner.cpp" />
     <ClCompile Include="MinesDialog.cpp" />
     <ClCompile Include="MouseDialog.cpp" />
     <ClCompile Include="Mover.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SplitterWindowTutorialView.cpp" />
     <ClCompile Include="View2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MFC_Tutorial_Window2.h" />
     <ClInclude Include="Miner.h" />
     <ClInclude Include="MinesDialog.h" />
     <ClInclude Include="MouseDialog.h" />
     <ClInclude Include="Mover.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SplitterWindowTutorialView.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="View2.h" />
   </ItemGroup>
